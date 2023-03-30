@@ -496,7 +496,7 @@ func (r *renderer) renderCodeBlock(w io.Writer, node *ast.CodeBlock) {
 
 func (r *renderer) renderFormattedCodeBlock(w io.Writer, code string) {
 	// remove the trailing line break
-	code = strings.TrimRight(code, "\n")
+	// code = strings.TrimRight(code, "\n")
 
 	r.addPad(GreenBold("┃ "))
 	output, _ := text.WrapWithPad(code, r.lineWidth, r.pad())
